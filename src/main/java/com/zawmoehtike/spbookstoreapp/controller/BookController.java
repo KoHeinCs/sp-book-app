@@ -25,6 +25,7 @@ public class BookController {
     
     @GetMapping(value="/{id}")
     public Book findBookById(@PathVariable ("id") int id) {
+        System.out.println("Get By Id :"+id);
     	return bookRepository.getOne(id);
     			
     }
